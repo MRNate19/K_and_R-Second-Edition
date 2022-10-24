@@ -37,7 +37,14 @@ int main()
             ++nwords[wc - 1];
     }
 
-    printf("words =");
-    for (i = 0; i < 10; ++i)
-        printf(" %d", nwords[i]);
+    /* print horizontal histogram of data */
+    for (i = 0; i < wc; ++i)
+    {
+        printf("%d: ", i + 1);
+        for (int j = 0; j < nwords[i]; j++)
+        {
+            printf("-");
+        }
+        printf("\n");
+    }
 }
